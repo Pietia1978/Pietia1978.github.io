@@ -1,0 +1,47 @@
+img {
+	max-width:300px;
+}
+li {
+	display: inline-block; 
+	list-style-type: none;
+}
+body > div > header {
+	background-color: gray;
+	width:1000px;
+}
+#nav {
+	background-color: lightblue;
+	width: 333px;
+	position: absolute;
+	left:667px;
+	top:100px;
+}
+#content{
+	background-color: yellow;
+	width:666px;
+	position:absolute;
+	left:0;
+	top:100px;
+}
+/*
+#content > article {
+	width:48%;
+	float:left;
+}
+*/
+body > div > footer {
+	background-color: olive;
+	position: absolute;
+	bottom: 0;
+	display: none;
+}
+
+body {
+	margin: 0px;
+}
+
+#wrapper {
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+}
