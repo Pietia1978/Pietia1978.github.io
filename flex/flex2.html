@@ -1,0 +1,87 @@
+<style>
+@media (min-width: 60em) {
+  /* two column layout only when enough room (relative to default text size) */
+  div { 
+  	display: flex;
+   }
+  #main {
+    flex: 1;         /* Main takes up all remaining space */
+    order: 1;        /* Place it after (to the right of) the navigation */
+    min-width: 12em; /* Optimize main content area sizing */
+  }
+}
+
+ul {
+    list-style:none;
+    padding-left:0;
+}
+
+nav > ul {
+	background-color: gray;
+	border-radius: 0.5em;
+	padding:0.1em;
+	margin:0;
+	list-style: none;
+	text-align: left;
+}
+/* menu items use flex layout so that visibility:collapse will work */
+nav > ul > li {
+  display: flex;
+  flex-flow: column;
+  list-style-type:none;
+  border-radius:0.4em;
+  border:0.075em  solid black;
+}
+
+
+/* dynamically collapse submenus when not targetted */
+nav > ul > li:not(:target):not(:hover) > ul {
+  visibility: collapse;
+  /*crappy chrome implementation workaround */
+  height: 0;
+}
+/*
+nav > ul > li > ul {
+  //visibility: collapse;
+  display:none;
+}
+nav > ul > li:target > ul {
+  //visibility: visible;
+  display: inline;
+}
+
+nav > ul > li:hover > ul {
+  //visibility: visible;
+  display: inline;
+}
+</style>
+<div>
+  <article id="main">
+    Interesting Stuff to Read
+  </article>
+  <nav>
+    <ul>
+      <li id="nav-about"><a href="#nav-about">About</a>
+        <ul>
+          <li><a href="…">Art</a>
+          <li><a href="…">Architecture</a>
+          <li><a href="…">Music</a>
+        </ul>
+        </li>
+      <li id="nav-projects"><a href="#nav-projects">Projects</a>
+        <ul>
+          <li><a href="…">Art</a>
+          <li><a href="…">Architecture</a>
+          <li><a href="…">Music</a>
+        </ul></li>
+      <li id="nav-interact"><a href="#nav-interact">Interact</a>
+     	 <ul>
+          <li><a href="…">Art</a>
+          <li><a href="…">Architecture</a>
+          <li><a href="…">Music</a>
+        </ul>
+        </li>
+    </ul>
+  </nav>
+</div>
+<footer>
