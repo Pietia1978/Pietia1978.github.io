@@ -1,0 +1,33 @@
+<style>
+body {
+	counter-reset: rozdzial 0;	
+}
+
+h1:before
+{
+	content: "Rodzial " counter(rozdzial) " " ;
+	counter-increment: rozdzial;
+	
+	display:block; /*w osobnej linijce*/
+}
+
+h1{
+	counter-reset: podrozdzial 0;
+	/*jesli robimy reset w before, niestety caly czas resetuje sie do 0*/
+}
+h2:before {
+	content: "Podrodzial " counter(podrozdzial) " " ;
+	counter-increment: podrozdzial;
+}
+</style>
+<h1>Costam costam</h1>
+<h2>Podrozdzialik</h2>
+<p>Hello world</p>
+<h2>Podrozdzialik</h2>
+<p>Hello world</p>
+<h1>Cos jeszcze</h1>
+<h2>Podrozdzialik</h2>
+<p>Hello world</p>
+<p>jeszcze tekst</p>
+<h2>Podrozdzialik</h2>
+<p>Hello world</p>
