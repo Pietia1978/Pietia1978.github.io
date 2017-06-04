@@ -5,10 +5,11 @@
 <body>
 <script>
 
-function getUrlParameters()
+function getAccessToken()
 {
-    var searchParams = new URLSearchParams(window.location.search);
-    return searchParams.get("access_token");
+    var currentUrl = document.URL,
+    urlParts   = currentUrl.split('#');
+    return (urlParts.length > 1) ? urlParts[1] : null;
 
 }
 
