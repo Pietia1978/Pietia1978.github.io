@@ -4,25 +4,14 @@
 </head>
 <body>
 <script>
-function explode(delim, str)
-{
-    return str.split(delim);
-}
 
 function getUrlParameters()
 {
-    var out = {};
-    var str = window.location.search.replace("?", "");
-    var subs = explode('&', str);
-    for(var i = 0; i < subs.length; ++i)
-    {
-        var vals = explode('=', subs[i]);
-        out[vals[0]] = vals[1];
-    }
-    return out;
+    return decodeURIComponent(window.location.search.match(/(\?|&)access_token\=([^&]*)/)[2]);
+
 }
 
-alert(getUrlParameters()['access_token']);
+alert(getUrlParameters());
 </script>
 </body>
 </html>
