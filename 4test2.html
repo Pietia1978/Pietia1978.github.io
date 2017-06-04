@@ -7,7 +7,7 @@
 
 function getUrlParameters()
 {
-    var searchParams = new URLSearchParams(paramsString);
+    var searchParams = new URLSearchParams(window.location.search);
     return searchParams.get("access_token");
 
 }
