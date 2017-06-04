@@ -15,8 +15,8 @@ function getAnchor()
 
 function getAccessToken()
 {
-    var anchor = getAnchor();
-    anchorParts   = currentUrl.split('=');
+    var anchorText = getAnchor();
+    anchorParts   = anchorText.split('=');
     return (anchorParts.length > 1) ? anchorParts[1] : null;
 
 }
