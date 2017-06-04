@@ -47,7 +47,7 @@ function get(url) {
 function init()
 {
 	var accessToken = getAccessToken();
-	get('https://api.foursquare.com/v2/users/selfoauth_token=EAAN4TSWOINHI4KD5GOWHACII3XHHOFHZQJC0LB5WRJFZXJC&v=20170604').then(function(response) {
+	get('https://api.foursquare.com/v2/users/self?oauth_token=EAAN4TSWOINHI4KD5GOWHACII3XHHOFHZQJC0LB5WRJFZXJC&v=20170604').then(function(response) {
 	  console.log("Success!", response);
 	}, function(error) {
 	  console.error("Failed!", error);
