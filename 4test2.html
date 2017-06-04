@@ -49,7 +49,8 @@ function init()
 	var accessToken = getAccessToken();
 	get('https://api.foursquare.com/v2/users/self?oauth_token='+accessToken+'&v=20170604').then(function(response) {
 	  console.log("Success!", response);
-	  console.log(response.response.user.lastName);
+	  res=JSON.parse(response);
+	  console.log(res.response.user.lastName);
 	}, function(error) {
 	  console.error("Failed!", error);
 })
