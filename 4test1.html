@@ -4,15 +4,13 @@
 </head>
 <body>
 <script>
-  var config = {
-    apiKey: 'EAAN4TSWOINHI4KD5GOWHACII3XHHOFHZQJC0LB5WRJFZXJC',
-    authUrl: 'https://foursquare.com/',
-    apiUrl: 'https://api.foursquare.com/',
-    redirect: 'https://pietia1978.github.io/4test2.html'
-  };
-  var url = 'https://foursquare.com/oauth2/authenticate?client_id='+config.apiKey+
-    '&response_type=token&redirect_uri='config.redirect;
-    window.location.href = url;
+	function doAuthRedirect() {
+		var apiKey: 'EAAN4TSWOINHI4KD5GOWHACII3XHHOFHZQJC0LB5WRJFZXJC';
+		var url = 'https://foursquare.com/oauth2/authenticate?client_id='+config.apiKey+
+		'&response_type=token&redirect_uri=https://pietia1978.github.io/4test2.html';
+		window.location.href = url;
+	}
+	doAuthRedirect();
 </script>
 </body>
 </html>
