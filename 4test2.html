@@ -5,11 +5,19 @@
 <body>
 <script>
 
-function getAccessToken()
+function getAnchor()
 {
     var currentUrl = document.URL,
     urlParts   = currentUrl.split('#');
     return (urlParts.length > 1) ? urlParts[1] : null;
+
+}
+
+function getAccessToken()
+{
+    var anchor = getAnchor();
+    anchorParts   = currentUrl.split('=');
+    return (anchorParts.length > 1) ? anchorParts[1] : null;
 
 }
 
